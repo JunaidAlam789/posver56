@@ -58,7 +58,9 @@ pnpm prisma generate
 
 https://www.prisma.io/docs/orm/more/help-and-troubleshooting/nextjs-help
 
-output   = "prisma/generated/prisma/client"
+//output   = "generated/prisma/client" 
+build command
+https://www.prisma.io/docs/orm/more/help-and-troubleshooting/vercel-caching-issue
 
 "prisma": {
   "seed": "ts-node prisma/seed.ts"
