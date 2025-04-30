@@ -5,3 +5,7 @@ export default function Home() {
   //SeedComponent()
   redirect("/landingpage")
 }
+
+
+//export const dynamic='force-dynamic';
+//export const revalidate = 5;
