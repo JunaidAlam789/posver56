@@ -6,7 +6,7 @@ import { formatCurrency } from "@/lib/utils"
 import { ShoppingCart, Trash2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter, SheetClose } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Input } from "@/components/ui/input"
@@ -26,18 +26,18 @@ export function Cart() {
             <Badge className="absolute -top-2 -right-2 h-5 w-5 p-0 flex items-center justify-center">{itemCount}</Badge>
           )}
         </Button>
-      </SheetTrigger>
+      </SheetTrigger>     
       <SheetContent className="w-full sm:max-w-md flex flex-col">
         <SheetHeader>
           <SheetTitle>Your Cart</SheetTitle>
-        </SheetHeader>
+        </SheetHeader>        
 
         {items.length === 0 ? (
           <div className="flex flex-col items-center justify-center flex-1 p-4">
             <ShoppingCart className="h-16 w-16 text-muted-foreground mb-4" />
             <p className="text-muted-foreground">Your cart is empty</p>
             <Button asChild className="mt-4">
-              <Link href="/products">Browse Products</Link>
+              <Link href="/products"><SheetClose>Browse Products</SheetClose></Link>
             </Button>
           </div>
         ) : (
@@ -133,7 +133,8 @@ export function Cart() {
 
               <SheetFooter className="mt-4">
                 <Button asChild className="w-full">
-                  <Link href="/checkout">Checkout</Link>
+                  <Link href="/checkout"><SheetClose>Checkout</SheetClose></Link>
+                  
                 </Button>
               </SheetFooter>
             </div>
