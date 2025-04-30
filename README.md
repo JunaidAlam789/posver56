@@ -58,6 +58,8 @@ pnpm prisma generate
 
 https://www.prisma.io/docs/orm/more/help-and-troubleshooting/nextjs-help
 
+output   = "prisma/generated/prisma/client"
+
 "prisma": {
   "seed": "ts-node prisma/seed.ts"
 }
