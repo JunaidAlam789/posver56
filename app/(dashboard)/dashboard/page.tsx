@@ -6,7 +6,7 @@ import { Overview } from "./components/overview"
 
 export default async function DashboardPage() {
   const stats = await getDashboardStats()
-  const recentOrders = await getRecentOrders(5)
+  //const recentOrders = await getRecentOrders(5)
 
   return (
     <div className="flex-1 space-y-4 p-4 md:p-8 pt-4 md:pt-6">
@@ -65,7 +65,7 @@ export default async function DashboardPage() {
             <CardTitle>Recent Orders</CardTitle>
           </CardHeader>
           <CardContent>
-            <RecentOrders orders={recentOrders} />
+           {/* <RecentOrders orders={recentOrders} /> */}
           </CardContent>
         </Card>
       </div>
